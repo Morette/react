@@ -25,4 +25,8 @@ yarn-error.log*
 # local folders
 
 30-days-of-react
-/jogo-da-velha/node_modules
+/jogo-da-velha/node_module
+
+#local files
+.gitignore
+/jogo-da-velha/.gitignore
