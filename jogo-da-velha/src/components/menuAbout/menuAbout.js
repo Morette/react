@@ -3,7 +3,7 @@ import './style.css';
 
 const MenuAbout = () => {
   return (
-    <p className="menu-about">About</p>
+    <a href="to-do" className="menu-about">About</a>
   )
 }
 
