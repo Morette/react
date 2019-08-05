@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuAbout from "./components/menuAbout/menuAbout";
+import MenuAbout from "./objects/MenuAbout";
 import "./App.css"
 
 function App() {
@@ -11,3 +11,4 @@ function App() {
 }
 
 export default App;
+git 
