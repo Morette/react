@@ -1,16 +1,11 @@
 import React from "react";
-import MenuAbout from "./objects/MenuAbout";
-import Menu from "./objects/Menu"
+import Header from './components/header'
 
 import Logo from "./objects/logo";
 
 function App() {
   return (
-    <>
-      <Logo />
-      <MenuAbout />
-      <Menu />
-    </>
+    <Header />
   );
 }
 
