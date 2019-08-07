@@ -1,6 +1,5 @@
 .menu {
   display: block;
-  text-indent: -9999px;
 }
 
 .menu::before,
