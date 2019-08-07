@@ -1,12 +1,16 @@
-import React from 'react';
+import React from "react";
 import MenuAbout from "./objects/MenuAbout";
-import "./App.css"
+import Menu from "./objects/Menu"
+
+import Logo from "./objects/logo";
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <Logo />
       <MenuAbout />
-    </div>
+      <Menu />
+    </>
   );
 }
 
