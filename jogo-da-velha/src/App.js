@@ -2,14 +2,14 @@ import React from "react";
 import Header from './components/header'
 
 import Card from './objects/Card';
-
-import Logo from "./objects/logo";
+import Player from './objects/Player'
 
 function App() {
   return (
     <>
       <Header />
       <Card />
+      <Player player="o"/>
     </>
   );
 }
