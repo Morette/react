@@ -1,13 +1,8 @@
 import React from "react";
 import "./styles.css";
 
-import Label from "../Label";
-
-const Input = ({ id = "", value = "", content = "" }) => (
-  <>
-    <input id={id} type="checkbox" value={value} className="input" />
-    <Label htmlFor={id} content={content} />
-  </>
+const Input = ({ id = "", value = "", type = "text" }) => (
+  <input id={id} type={type} value={value} className="input" />
 )
 
 export default Input;
