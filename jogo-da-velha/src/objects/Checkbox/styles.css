@@ -13,3 +13,7 @@
   margin-right: 6px;
   cursor: pointer;
 }
+
+.input:checked + .label::before {
+  background-color: var(--color-fourth);
+}
