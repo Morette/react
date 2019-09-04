@@ -1,10 +1,8 @@
 import React from 'react';
 import './style.css'
 
-const MenuAbout = () => {
-  return (
-    <a href="to-do" className="menu-about">About</a>
-  )
-}
+const MenuAbout = ({ className="" }) => (
+  <a href="to-do" className={`menu-about ${className}`}>About</a>
+);
 
 export default MenuAbout;

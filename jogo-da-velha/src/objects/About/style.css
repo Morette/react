@@ -1,0 +1,8 @@
+.about {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-negative);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
