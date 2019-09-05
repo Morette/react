@@ -1,0 +1,18 @@
+.profile-user {
+  color: var(--color-zero);
+}
+
+.profile-user > .avatar {
+  margin: 0 auto var(--spacing-medium);
+}
+
+.profile-user > .name {
+  font-size: var(--size-big);
+  font-weight: bold;
+  margin-bottom: var(--spacing-small);
+}
+
+.profile-user > .description {
+  width: 80%;
+  margin: auto;
+}
