@@ -1,16 +1,18 @@
 import React from 'react';
+
+import './styles.css'
+
 import LogoCollab from '../../objects/LogoCollab'
 import MenuAbout from "../../objects/MenuAbout";
 import Menu from "../../objects/Menu"
 
-import './styles.css'
 
-const Header = () => {
+const Header = ({ onClick }) => {
   return (
     <header className="header">
       <LogoCollab />
-      <MenuAbout />
-      <Menu />
+      <MenuAbout onClick={onClick} />
+      <Menu onClick={onClick} />
     </header>
   )
 }
