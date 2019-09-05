@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   transform: translateX(100%);
-  transition: transform 800ms linear;
+  transition: transform 400ms linear;
 }
 
 .about.-active {
