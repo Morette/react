@@ -12,7 +12,15 @@
   margin-bottom: var(--spacing-small);
 }
 
-.profile-user > .description {
+.profile-user > .description{
   width: 80%;
-  margin: auto;
+  margin: 0 auto var(--spacing-big);
+  line-height: 1.6;
+}
+
+.profile-user > .socials {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 70%;
 }

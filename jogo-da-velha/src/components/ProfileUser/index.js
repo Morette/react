@@ -19,11 +19,21 @@ const ProfileUser = () => (
     <dt className="name">Thiago Morette</dt>
     <dd className="description">Graduate engineer and passionate developer. Left engineering to attend my real passion developing softwares.</dd>
     <dd className="socials">
-      <IconSocial src={GitHub} alt="Logo GitHub" />
-      <IconSocial src={Facebook} alt="Logo Facebook" />
-      <IconSocial src={Twitter} alt="Logo Twitter" />
-      <IconSocial src={LinkedIn} alt="Logo LinkedIn" />
-      <IconSocial src={Instagram} alt="Logo Instagram" />
+      <IconSocial action="https://github.com/Morette"
+        src={GitHub}
+        alt="Logo GitHub" />
+      <IconSocial action="https://www.facebook.com/thiago.morette"
+        src={Facebook}
+        alt="Logo Facebook" />
+      <IconSocial action="https://twitter.com/thiagomorette"
+        src={Twitter}
+        alt="Logo Twitter" />
+      <IconSocial action="https://www.linkedin.com/in/thiago-morette/"
+        src={LinkedIn}
+        alt="Logo LinkedIn" />
+      <IconSocial action="https://www.instagram.com/tmorette/"
+        src={Instagram}
+        alt="Logo Instagram" />
     </dd>
   </dl>
 );
