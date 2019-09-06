@@ -1,8 +1,8 @@
-.card {
+.card-game {
   padding: 15px;
 }
 
-.hashtag {
+.hashtag-game {
   display: grid;
   height: 100%;
   background-color: var(--color-third);
@@ -11,7 +11,7 @@
   grid-gap: 3px;
 }
 
-.hashtag > .hashtag-item {
+.hashtag-game > .hashtag-item {
   background-color: var(--color-zero);
   display: flex;
   justify-content: center;

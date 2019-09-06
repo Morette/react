@@ -1,11 +1,11 @@
-.menu {
+.menu-game {
   display: block;
   text-indent: -9999px;
 }
 
-.menu::before,
-.menu::after,
-.menu > .center {
+.menu-game::before,
+.menu-game::after,
+.menu-game > .center {
   content: '';
   display: block;
   height: 4px;
@@ -14,7 +14,7 @@
   border-radius: 2px;
 }
 
-.menu::before,
-.menu > .center {
+.menu-game::before,
+.menu-game > .center {
   margin-bottom: 4px;
 }

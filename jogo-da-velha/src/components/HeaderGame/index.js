@@ -4,17 +4,17 @@ import './styles.css'
 
 import LogoCollab from '../../objects/LogoCollab'
 import MenuAbout from "../../objects/MenuAbout";
-import Menu from "../../objects/Menu"
+import MenuGame from "../../objects/MenuGame"
 
 
-const Header = ({ onClick }) => {
+const HeaderGame = ({ onClick }) => {
   return (
-    <header className="header">
+    <header className="header-game">
       <LogoCollab />
       <MenuAbout onClick={onClick} />
-      <Menu onClick={onClick} />
+      <MenuGame onClick={onClick} />
     </header>
   )
 }
 
-export default Header;
+export default HeaderGame;
