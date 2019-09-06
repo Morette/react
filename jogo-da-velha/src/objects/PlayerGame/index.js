@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import playerX from '../../images/Player-X.png';
 import playerO from '../../images/Player-Circle.png';
 
-const handleClick = () => {
-  console.log('clicou');
-}
-
 const PlayerGame = ({ player }) => {
+
+  const [statePlayer, setStatePlayer] = useState(player);
+
+  const handleClick = () => setStatePlayer(
+    statePlayer ? "x" : "o"
+    );
+
   const players = [];
   players['x'] = playerX;
   players['o'] = playerO;
 
   return (
     <button className="player-game" onClick={handleClick} >
-      {player &&
+      {statePlayer &&
         <img
-          src={players[player]}
-          alt={`Jogador ${player.toUpperCase()}`}
+          src={players[statePlayer]}
+          alt={`Jogador ${statePlayer.toUpperCase()}`}
         >
         </img>}
     </button>
