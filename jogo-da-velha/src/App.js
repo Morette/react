@@ -10,18 +10,25 @@ import ProfileUser from "./components/ProfileUser";
 import HistoryGame from "./components/HistoryGame";
 
 const App = () => {
-  const [activeAbout, setActiveAbout] = useState(""); 
-  
+  const [activeAbout, setActiveAbout] = useState("");
+
   const handleClickAdd = () => setActiveAbout("-active");
 
   const handleClickRemove = () => setActiveAbout("");
+
+  const handleClickShowHistory = () => console.log('consegui!!');
 
   return (
     <main className="app">
       <HeaderGame onClick={handleClickAdd} />
       <HashtagGame />
-      <InputCheckBox id="show" content="Mostrar Eventos" value="Mostrar Eventos" />
-      <HistoryGame />      
+      <InputCheckBox
+        id="show"
+        content="Mostrar Eventos"
+        value="Mostrar Eventos"
+        onClick={handleClickShowHistory}
+      />
+      <HistoryGame />
 
       <LayerDark className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />
