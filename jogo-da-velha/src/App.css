@@ -21,3 +21,11 @@
 .app > .label-game {
   margin-bottom: var(--spacing-medium);
 }
+
+.app > .history-game {
+  display: none;
+}
+
+.app > .history-game.-active {
+  display: block;
+}

@@ -11,12 +11,13 @@ import HistoryGame from "./components/HistoryGame";
 
 const App = () => {
   const [activeAbout, setActiveAbout] = useState("");
+  const [activeGameHistory, setGameHistory] = useState("");
 
   const handleClickAdd = () => setActiveAbout("-active");
 
   const handleClickRemove = () => setActiveAbout("");
 
-  const handleClickShowHistory = () => console.log('consegui!!');
+  const handleClickShowHistory = () => setGameHistory(old => old ? "" : "-active")
 
   return (
     <main className="app">
@@ -28,7 +29,7 @@ const App = () => {
         value="Mostrar Eventos"
         onClick={handleClickShowHistory}
       />
-      <HistoryGame />
+      <HistoryGame className={activeGameHistory} />
 
       <LayerDark className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />
