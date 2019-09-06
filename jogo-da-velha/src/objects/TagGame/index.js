@@ -1,7 +1,8 @@
 import React from 'react';
+import './style.css';
 
 const TagGame = ({ content }) => (
-  <output className="tag-name">{ content }</output>
+  <output className="tag-game">{ content }</output>
 
 )
 
