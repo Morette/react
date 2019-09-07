@@ -3,3 +3,7 @@
   background: none;
   width: 100%;
 }
+
+.player-game img {
+  width: 15vw;
+}

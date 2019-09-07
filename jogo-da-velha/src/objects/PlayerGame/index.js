@@ -7,9 +7,7 @@ const PlayerGame = ({ player }) => {
 
   const [statePlayer, setStatePlayer] = useState(player);
 
-  const handleClick = () => setStatePlayer(
-    statePlayer ? "x" : "o"
-    );
+  const handleClick = () => setStatePlayer(statePlayer === "x" ? "o" : "x");
 
   const players = [];
   players['x'] = playerX;
