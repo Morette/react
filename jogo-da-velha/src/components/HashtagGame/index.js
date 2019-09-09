@@ -4,7 +4,7 @@ import PlayerGame from "../../objects/PlayerGame"
 
 import "./styles.css"
 
-const HashtagGame = ({callBack}) => {
+const HashtagGame = ({ callBack }) => {
   const [nextPlayer, setNextPlayer] = useState("");
   const [players, setPlayers] = useState([
     { id: 1, content: "" },
@@ -19,12 +19,11 @@ const HashtagGame = ({callBack}) => {
   ]);
 
   const handleClick = id => {
-    setNextPlayer(old => old === "X" ? "O" : "X");
-
     setPlayers(old => old.map(
       player => player.id === id ?
         { id, content: nextPlayer } : player));
 
+    setNextPlayer(old => old === "X" ? "O" : "X");
     callBack(nextPlayer);
   }
 
@@ -37,7 +36,7 @@ const HashtagGame = ({callBack}) => {
             onClick={() => content === "" && handleClick(id)} >
             <PlayerGame id={id} content={content} />
           </li>)}
-      </ul> 
+      </ul>
     </CardGame>
   )
 }
