@@ -1,25 +1,35 @@
-import React from "react";
-import Card from "../../objects/CardGame"
+import React, { useState } from "react";
+import CardGame from "../../objects/CardGame"
 import PlayerGame from "../../objects/PlayerGame"
 
 import "./styles.css"
 
-const HashtagGame = () => (
-  <Card>
-    <ul className="hashtag-game">
-      <li className="hashtag-item"><PlayerGame /></li>
-      <li className="hashtag-item"><PlayerGame /></li>
-      <li className="hashtag-item"><PlayerGame /></li>
+const HashtagGame = () => {
+  const [nextPlayer, setNextPlayer] = useState("");
+  const [players, setPlayers] = useState([
+    { id: 1, content: "" },
+    { id: 2, content: "" },
+    { id: 3, content: "" },
+    { id: 4, content: "" },
+    { id: 5, content: "" },
+    { id: 6, content: "" },
+    { id: 7, content: "" },
+    { id: 8, content: "" },
+    { id: 9, content: "" },
+  ]);
 
-      <li className="hashtag-item"><PlayerGame /></li>
-      <li className="hashtag-item"><PlayerGame /></li>
-      <li className="hashtag-item"><PlayerGame /></li>
-      
-      <li className="hashtag-item"><PlayerGame /></li>
-      <li className="hashtag-item"><PlayerGame /></li>
-      <li className="hashtag-item"><PlayerGame /></li>
-    </ul>
-  </Card>
-)
+  const handleClick = () => {
+    setNextPlayer(old => old === "x" ? "o" : "x");
+  }
+
+  return (
+    <CardGame>
+      <ul className="hashtag-game" onClick={handleClick} >
+        {players.map(player =>
+          <li key={player.id} className="hashtag-item"><PlayerGame player={nextPlayer} /></li>)}
+      </ul>
+    </CardGame>
+  )
+}
 
 export default HashtagGame;

@@ -3,15 +3,15 @@ import './styles.css';
 import playerX from '../../images/Player-X.png';
 import playerO from '../../images/Player-Circle.png';
 
-const PlayerGame = ({ player }) => {
+const PlayerGame = ({ player = false }) => {
 
-  const [statePlayer, setStatePlayer] = useState(player);
-
-  const handleClick = () => setStatePlayer(statePlayer === "x" ? "o" : "x");
-
+  const [statePlayer, setStatePlayer] = useState("");
+  
   const players = [];
   players['x'] = playerX;
   players['o'] = playerO;
+
+  const handleClick = () => setStatePlayer(player);
 
   return (
     <button className="player-game" onClick={handleClick} >
