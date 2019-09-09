@@ -4,7 +4,7 @@ import PlayerGame from "../../objects/PlayerGame"
 
 import "./styles.css"
 
-const HashtagGame = () => {
+const HashtagGame = ({callBack}) => {
   const [nextPlayer, setNextPlayer] = useState("");
   const [players, setPlayers] = useState([
     { id: 1, content: "" },
@@ -24,6 +24,8 @@ const HashtagGame = () => {
     setPlayers(old => old.map(
       player => player.id === id ?
         { id, content: nextPlayer } : player));
+
+    callBack(nextPlayer);
   }
 
   return (
