@@ -1,0 +1,20 @@
+.menu-game {
+  display: block;
+  text-indent: -9999px;
+}
+
+.menu-game::before,
+.menu-game::after,
+.menu-game > .center {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-fourth);
+  border-radius: 2px;
+}
+
+.menu-game::before,
+.menu-game > .center {
+  margin-bottom: 4px;
+}

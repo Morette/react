@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css"
 
-function App() {
+import LayerDark from "./objects/LayerDark";
+import InputCheckBox from "./objects/InputCheckBox";
+import HeaderGame from "./components/HeaderGame";
+import HashtagGame from "./components/HashtagGame";
+import HeaderInternal from "./components/HeaderInternal";
+import ProfileUser from "./components/ProfileUser";
+import HistoryGame from "./components/HistoryGame";
+
+const App = () => {
+  const [activeAbout, setActiveAbout] = useState("");
+  const [history, setHistory] = useState([]);
+
+  const handleClickAdd = () => setActiveAbout("-active");
+
+  const handleClickRemove = () => setActiveAbout("");
+
+  const addHistory = player => setHistory(
+    old => [...old, `Adicionou ${player.toUpperCase()}`]
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="app">
+      <HeaderGame onClick={handleClickAdd} />
+      <HashtagGame callBack={addHistory} />
+      <InputCheckBox id="show" content="Mostrar Eventos" value="Mostrar Eventos" />
+      <HistoryGame history={history} />
+
+      <LayerDark className={activeAbout}>
+        <HeaderInternal onClick={handleClickRemove} />
+        <ProfileUser />
+      </LayerDark>
+    </main>
   );
 }
 

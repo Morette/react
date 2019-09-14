@@ -1,0 +1,18 @@
+.card-game {
+  padding: 15px;
+}
+
+.hashtag-game {
+  display: grid;
+  height: 100%;
+  background-color: var(--color-third);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 3px;
+}
+
+.hashtag-game > .hashtag-item {
+  background-color: var(--color-zero);
+  display: flex;
+  justify-content: center;
+}
